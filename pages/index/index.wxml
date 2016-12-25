@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="page">
+	<view class="header flex-row border-bottom">
+		<view class="flex-auto flex-column">
+			<text class="text-h1 text-ls mb5">鲜时达</text>
+			<text class="text-h3 c-gray">您的社区服务中心</text>
+		</view>
+		<view class="flex-row">
+			<view class="btn-icon">
+				<image class="icon" src="/images/icons/head.png"></image>
+			</view>
+			<navigator url="../demo/index" class="btn-icon">
+				<image class="icon" src="/images/icons/hammer.png"></image>
+			</navigator>
+		</view>
+	</view>
+	<view class="welcome flex-column">
+		<view class="mb30">
+			<button type="primary" bindtap="tokenScan">添加服务站</button>
+		</view>
+		<text class="text">我们的服务都是通过服务站提供，您首先要添加您的服务站。</text>
+		<text class="text">添加办法：点击按钮扫描服务站二维码，在确认服务站名称后点击添加。</text>
+	</view>
+</view>

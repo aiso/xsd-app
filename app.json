@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+
+    "pages/token/101",
+
+    "pages/demo/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#222",
+    "navigationBarTitleText": "鲜时达",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#f1f1f1",
+    "backgroundTextStyle": "dark"
+  }
+}

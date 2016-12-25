@@ -1,0 +1,19 @@
+/**index.wxss**/
+.header{
+  background: white;
+  padding: 60rpx 30rpx 60rpx 60rpx;
+}
+
+.header .btn-icon{
+	margin-left:15rpx;
+}
+
+.welcome{
+	padding:60rpx;
+}
+
+.welcome .text{
+	color:#888;
+	line-height: 1.4;
+	margin-bottom: 15rpx;
+}

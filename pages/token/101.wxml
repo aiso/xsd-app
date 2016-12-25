@@ -1,0 +1,6 @@
+<view class="page">
+	<view class="pane-hero text-center flex-column border-bottom" wx:if="!station">
+		<text class="text-h3 text-ls mb5">添加我的服务站</text>
+		<text class="text-h4 c-gray">请求中...</text>
+	</view>
+</view>
