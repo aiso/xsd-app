@@ -54,6 +54,7 @@ App({
   },
   globalData:{
     env:'dev',
-    userInfo:null
+    userInfo:null,
+    dirty:[]
   }
 })

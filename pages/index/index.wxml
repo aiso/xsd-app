@@ -3,9 +3,12 @@
 	<view class="header flex-row border-bottom">
 		<view class="flex-auto flex-column">
 			<text class="text-h1 text-ls mb5">鲜时达</text>
-			<text class="text-h3 c-gray">您的社区服务中心</text>
+			<text class="text-h4 c-gray">您的社区服务中心</text>
 		</view>
 		<view class="flex-row">
+			<view class="btn-icon" bindtap="tokenScan">
+				<image class="icon" src="/images/icons/expand.png"></image>
+			</view>
 			<view class="btn-icon">
 				<image class="icon" src="/images/icons/reload.png"></image>
 			</view>
@@ -14,11 +17,26 @@
 			</navigator>
 		</view>
 	</view>
-	<view class="welcome flex-column">
+	<view class="welcome flex-column" wx:if="{{!roles}}">
 		<view class="mb30">
 			<button type="primary" bindtap="tokenScan">添加服务站</button>
 		</view>
 		<text class="text">我们的服务都是通过服务站提供，您首先要添加您的服务站。</text>
 		<text class="text">添加办法：点击按钮扫描服务站二维码，在确认服务站名称后点击添加。</text>
+	</view>
+	<view wx:if="{{!!roles}}">
+		<view wx:if="{{roles.clients.length>0}}">
+			<view class="text-center pane-tip border-bottom">
+				<text class="text">我的服务站</text>
+			</view>
+			<view wx:for="{{roles.clients}}" wx:key="id" wx:for-item="role" class="btn profiles border-bottom flex-row">
+				<image class="avatar" src="{{role.profile.img}}" />
+				<view class="flex-auto flex-column plr30">
+					<text class="text-h3 mb5">{{role.profile.name}}</text>
+					<text class="text-h4 c-gray">{{role.profile.address}}</text>
+				</view>
+				<image class="icon middle opacity30" src="/images/icons/home.png" />
+			</view>
+		</view>
 	</view>
 </view>

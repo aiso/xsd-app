@@ -4,12 +4,6 @@ const api = require('request.js')
 const sync = require('../utils/sync.js')
 
 
-const stations = sync.initEntity('stations', ()=>{
-    return api.get('supplier/stations').then(data=>{
-      return data.stations
-    })
-})
-
 //const stations = sync.setEntity('stations')
 
 const base = sync.initEntity('base', ()=>{
@@ -18,7 +12,13 @@ const base = sync.initEntity('base', ()=>{
     })
 })
 
+const roles = sync.initEntity('roles', ()=>{
+    return api.get('roles').then(data=>{
+      return data.roles
+    })
+})
+
 module.exports = {
-	stations,
-	base
+	base,
+	roles
 }

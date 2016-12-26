@@ -17,3 +17,7 @@
 	line-height: 1.4;
 	margin-bottom: 15rpx;
 }
+
+.profiles{
+	padding: 30rpx 30rpx 30rpx 40rpx;
+}

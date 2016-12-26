@@ -32,6 +32,7 @@ Page({
 	},
 	postToken(){
 		xsd.api.post('client/station', {token:this.data.token,action:'commit'}).then(data=>{
+			xsd.sync.roles.dirty()
 			wx.navigateBack()
 		}).catch(err=>{
 			this.setData({info:{cls:'c-red', info:err}})

@@ -446,8 +446,8 @@
   background-image: url(http://xiansda.sinaapp.com/public/img/icon/user_original.jpg);
   background-size:120rpx 120rpx;
 
-  width: 120rpx;
-  height: 120rpx;
+  width: 100rpx;
+  height: 100rpx;
   border-radius: 50%;
 }
 .avatar.small{
@@ -485,6 +485,9 @@
   height:32rpx;
 }
 
+.opacity30{
+  opacity: .3 
+}
 .opacity50{
   opacity: .5 
 }

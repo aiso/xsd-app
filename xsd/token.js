@@ -5,7 +5,7 @@ const Promise = require('../utils/promise').Promise
 const scanCode = () => {
 	return new Promise((resolve, reject) => {
 		if(app.globalData.env == 'dev')
-			resolve('XSD-101-7BGCEL39')
+			resolve('XSD-102-42R4TB3B')
 		else{
 		    wx.scanCode({
 		      success: (res) => {

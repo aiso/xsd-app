@@ -1,10 +1,13 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/login",
     "pages/index/map",
     "pages/logs/logs",
 
     "pages/token/101",
+
+    "pages/client/index",
 
     "pages/demo/index"
   ],

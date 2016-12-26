@@ -34,6 +34,10 @@ SyncEntity.prototype.get = function(timestampe){
 		})
 	}
 }
+SyncEntity.prototype.dirty = function(){
+	this.data = null
+	return this
+}
 SyncEntity.prototype.getter = function(){
 	return new SyncGetter(this)
 }
