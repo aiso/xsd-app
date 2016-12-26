@@ -21,22 +21,27 @@ const _request = opts => {
 	  	}
 	  	else{
 	  		const msg = (!!res.data.error)?res.data.error.message:res.data
+	  		/*
 		    wx.showModal({
 		      title: '抱歉，发生错误！',
 		      content: msg,
 		      showCancel:false,
 		      confirmText:'知道了'
-		    })
+		    })*/
+		    console.log(msg)
 	  		reject(msg)
 	  	}
 	  },
 	  fail:err=>{
+	  	/*
 	    wx.showModal({
 	      title: '抱歉，发生错误！',
 	      content: err.errMsg,
 	      showCancel:false,
 	      confirmText:'知道了'
 	    })
+	    */
+	    console.log(err.errMsg)
 	  	reject(err.errMsg)
 	  }
 	}, opts)

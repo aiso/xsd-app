@@ -7,7 +7,7 @@
 		</view>
 		<view class="flex-row">
 			<view class="btn-icon">
-				<image class="icon" src="/images/icons/head.png"></image>
+				<image class="icon" src="/images/icons/reload.png"></image>
 			</view>
 			<navigator url="../demo/index" class="btn-icon">
 				<image class="icon" src="/images/icons/hammer.png"></image>

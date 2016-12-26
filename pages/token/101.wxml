@@ -1,6 +1,28 @@
 <view class="page">
-	<view class="pane-hero text-center flex-column border-bottom" wx:if="!station">
-		<text class="text-h3 text-ls mb5">添加我的服务站</text>
-		<text class="text-h4 c-gray">请求中...</text>
+	<view class="pane-hero text-center flex-column border-bottom" wx:if="{{!!info}}">
+		<text class="text-h3 text-ls {{info.cls}} mb5">{{info.info}}</text>
+		<text class="text-h4 c-gray">添加我的服务站</text>
 	</view>
+	<view wx:if="{{!!station}}" class="pane-hero flex-column">
+		<view class="text-center flex-column mb30">
+			<view>
+				<image src="{{station.img}}" class="avatar"></image>
+			</view>
+		  	<text class="text-h2 text-ls">{{station.name}}</text>
+		</view>
+	  	
+	  	<view class="p30 flex-row border-top" bindtap="openMap">
+	  		<text class="text-small flex-auto pr10">{{station.address}}</text>
+	  		<text class="text-small text-light">地址</text>
+	  	</view>
+	  	<view class="p30 flex-row border-top" wx:for-items="{{station.contacts}}" wx:key="id">
+	  		<text class="text-small flex-auto pr10">{{item}}</text>
+	  		<text class="text-small text-light">电话</text>
+	  	</view>
+
+		<view class="mt40">
+			<button type="primary" bindtap="postToken">添加</button>
+		</view>
+	</view>
+
 </view>
