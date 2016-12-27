@@ -144,6 +144,10 @@
   flex-direction:row;
   align-items:center;
 }
+.flex-row.align-top{
+  align-items: flex-start;
+}
+
 .flex-column{
   display: flex;
   flex-direction:column;
@@ -153,6 +157,7 @@
   align-items:center;
   justify-content:center;
 }
+
 
 .flex-auto{
   flex: auto;
@@ -472,9 +477,17 @@
   height:120rpx;
 }
 
+.thumbnail{
+  background-color: #eee;
+  width:90rpx;
+  height:90rpx;
+  display: block;
+}
+
 .icon{
   width:64rpx;
   height:64rpx;
+  display: block;
 }
 .icon.middle{
   width:48rpx;

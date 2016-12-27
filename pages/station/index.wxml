@@ -1,0 +1,35 @@
+<view class="page">
+	<view class="pane-hero flex-row bg-soft" wx:if="{{!!station}}">
+		<image class="avatar" src="{{station.img}}"></image>
+		<view class="flex-auto flex-column plr30">
+			<text class="text-h3">{{station.name}}</text>
+			<text class="text-h4 c-gray">{{station.address}}</text>
+		</view>
+		<view>
+			
+		</view>
+	</view>
+	<view class="group">
+		<view class="group-item btn flex-row">
+			<image class="icon middle" src="/images/icons/tag.png"></image>	
+			<view class="flex-auto group-item-content">
+				<text class="text-h3">已代理商品</text>
+			</view>
+			<view>
+				<image class="icon small opacity30" src="/images/icons/circle-right.png"></image>
+			</view>
+		</view>
+		<navigator url="posts/requests?station={{station.id}}">
+			<view class="group-item btn flex-row">
+				<image class="icon middle" src="/images/icons/paper.png"></image>	
+				<view class="flex-auto plr20">
+					<text class="text-h3">请求代理商品</text>
+				</view>
+				<view>
+					<image class="icon small opacity30" src="/images/icons/circle-right.png"></image>
+				</view>
+			</view>
+		</navigator>
+	</view>
+
+</view>

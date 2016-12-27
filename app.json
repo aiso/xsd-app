@@ -6,8 +6,12 @@
     "pages/logs/logs",
 
     "pages/token/101",
+    "pages/token/102",
 
     "pages/client/index",
+
+    "pages/station/index",
+    "pages/station/posts/requests",
 
     "pages/demo/index"
   ],

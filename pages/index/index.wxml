@@ -15,6 +15,9 @@
 			<navigator url="../demo/index" class="btn-icon">
 				<image class="icon" src="/images/icons/hammer.png"></image>
 			</navigator>
+			<navigator url="../station/posts/requests?station=1001" class="btn-icon">
+				<image class="icon" src="/images/icons/circle-right.png"></image>
+			</navigator>
 		</view>
 	</view>
 	<view class="welcome flex-column" wx:if="{{!roles}}">
@@ -37,6 +40,21 @@
 				</view>
 				<image class="icon middle opacity30" src="/images/icons/home.png" />
 			</view>
+		</view>
+		<view wx:if="{{roles.stations.length>0}}">
+			<view class="text-center pane-tip border-bottom">
+				<text class="text">工作服务站</text>
+			</view>
+			<navigator wx:for="{{roles.stations}}" wx:key="id" wx:for-item="role" url="/pages/station/index?id={{role.profile.id}}">
+				<view class="btn profiles border-bottom flex-row">
+					<image class="avatar" src="{{role.profile.img}}" />
+					<view class="flex-auto flex-column plr30">
+						<text class="text-h3 mb5">{{role.profile.name}}</text>
+						<text class="text-h4 c-gray">{{role.profile.address}}</text>
+					</view>
+					<image class="icon middle opacity30" src="/images/icons/user-tie.png" />
+				</view>
+			</navigator>
 		</view>
 	</view>
 </view>

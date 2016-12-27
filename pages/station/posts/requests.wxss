@@ -1,0 +1,17 @@
+.post{
+	padding: 30rpx;
+	border-top:1px solid #f1f1f1;
+}
+.post-item-content{
+	width: 400rpx;
+	padding-left: 30rpx;
+	padding-right: 30rpx;
+}
+.post-item-img{
+	display: block;
+	width:100rpx;
+	height: 80rpx;
+}
+.post-item-title{
+	width:430rpx;
+}
