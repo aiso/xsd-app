@@ -15,7 +15,7 @@
 			<navigator url="../demo/index" class="btn-icon">
 				<image class="icon" src="/images/icons/hammer.png"></image>
 			</navigator>
-			<navigator url="../station/posts/requests?station=1001" class="btn-icon">
+			<navigator url="../station/posts/index?station=1001" class="btn-icon">
 				<image class="icon" src="/images/icons/circle-right.png"></image>
 			</navigator>
 		</view>

@@ -1,23 +1,32 @@
 <view class="page">
-	<view class="pane-hero flex-row">
+	<view class="pane-hero flex-row bg-soft">
 		<image src="/images/icons/paper.png" class="icon"></image>
 		<view class="plr30">
 			<text class="text-h2">请求商品列表</text>
 		</view>
 	</view>
 	<view wx:for="{{posts}}" wx:for-item="post" wx:key="id" class="post">
-		<text class="text-h5 c-gray">{{post.timeago}}</text>
+		<view class="flex-row mb5">
+			<text class="text-bold text-h4 flex-auto">{{post.item.supplier.name}}</text>
+			<text class="text-h5 c-gray">{{post.timeago}}</text>
+		</view>
 		<view class="flex-row align-top">
 			<image src="{{post.item.img}}" class="post-item-img" mode="aspectFill"></image>
 			<view class="post-item-content flex-column">
-				<text class="text-h4 mb5">{{post.item.title}}</text>
-				<text class="text-bold text-h4">商品原价：￥{{post.item.price}}</text>
-				<text class="text-bold text-h4">代理费率：{{post.fee}}%</text>
-			</view>
-			<view class="flex-top">
-				<button size="mini" type="primary">代理</button>
+				<view class="mb10">
+					<text class="text-h4 ">{{post.item.title}}</text>	
+				</view>
+				<view class="flex-row">
+					<view class="flex-auto flex-column">
+						<text class="text-bold text-h4">商品原价：￥{{post.item.price}}</text>
+						<text class="text-bold text-h4">代理费率：{{post.fee}}%</text>
+					</view>
+					<view>
+						<button data-post-id="{{post.id}}" data-status="1" size="mini" type="primary" wx:if="{{post.status==0}}" bindtap="postStatus">代理</button>
+						<button data-post-id="{{post.id}}" data-status="0" size="mini" type="warn" wx:if="{{post.status==1}}" bindtap="postStatus">取消</button>
+					</view>
+				</view>
 			</view>
 		</view>
 	</view>
-
 </view>

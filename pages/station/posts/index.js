@@ -13,7 +13,7 @@ Page({
 		  icon: 'loading',
 		  duration: 2000
 		})
-		xsd.api.get('station/'+options.station+'/posts/request').then(data=>{
+		xsd.api.get('station/'+options.station+'/posts').then(data=>{
 			var timeagoInstance = new timeago();
 			const posts = data.posts.map(post=>{
 				post.timeago = timeagoInstance.format(post.utime)
@@ -24,13 +24,19 @@ Page({
 			wx.hideToast()
 		})
 	},
-	postStatus(e){
-		const postId = e.target.dataset.postId
-		const status = e.target.dataset.status
-		xsd.api.post('station/'+this.data.station+'/post/'+postId, {status}).then(data=>{
-			const post = this.data.posts.find(p=>p.id==postId)
-			post.status=data.post.status
-			this.setData({posts:this.data.posts})
-		})
-	}
+	removeAgent(e){
+        wx.showModal({
+          title: '提示',
+          content: '确实要取消该商品代理？',
+          success:(res)=>{
+		    if (res.confirm) {
+				const postId = e.currentTarget.dataset.postId
+				xsd.api.post('station/'+this.data.station+'/post/'+postId, {status:2}).then(data=>{
+					const posts = this.data.posts.filter(p=>p.id!=postId)
+					this.setData({posts})
+				})
+		    }
+          }
+        })		
+	}	
 })

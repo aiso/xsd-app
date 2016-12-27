@@ -1,0 +1,26 @@
+<view class="page">
+	<view class="pane-hero flex-row bg-soft">
+		<image src="/images/icons/tag.png" class="icon"></image>
+		<view class="plr30">
+			<text class="text-h2">代理商品列表</text>
+		</view>
+	</view>
+	<view wx:for="{{posts}}" wx:for-item="post" wx:key="id" class="post">
+		<view class="flex-row align-top">
+			<image src="{{post.item.img}}" class="post-item-img" mode="aspectFill"></image>
+			<view class="post-item-content flex-column">
+				<view class="mb10">
+					<text class="text-h4 ">{{post.item.title}}</text>	
+				</view>
+				<view class="flex-row">
+					<text class="text-bold text-h4">商品原价：￥{{post.item.price}}</text>
+					<view class="flex-auto"></view>
+					<text class="text-bold text-h4">代理费率：{{post.fee}}%</text>
+				</view>
+			</view>
+			<view class="btn-icon opacity30" data-post-id="{{post.id}}" bindtap="removeAgent">
+				<image class="icon" src="/images/icons/cross.png"></image>
+			</view>
+		</view>
+	</view>
+</view>

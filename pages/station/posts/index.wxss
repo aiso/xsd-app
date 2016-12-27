@@ -9,8 +9,8 @@
 }
 .post-item-img{
 	display: block;
-	width:200rpx;
-	height: 160rpx;
+	width:80rpx;
+	height: 80rpx;
 }
 .post-item-title{
 	width: 300rpx;
