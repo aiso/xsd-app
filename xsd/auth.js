@@ -48,7 +48,7 @@ const login = () => {
       const postData = {code: app.globalData.accessCode, userInfo}
 
       postData.code = 'client-test1' //调试用户
-      return api.post('login', postData).then(data=>{
+      return api.post('wx/login', postData).then(data=>{
 		  store(data.user).then(()=>{
 		  	app.globalData.user = user
 		  })

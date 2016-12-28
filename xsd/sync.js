@@ -13,7 +13,7 @@ const base = sync.initEntity('base', ()=>{
 })
 
 const roles = sync.initEntity('roles', ()=>{
-    return api.get('roles').then(data=>{
+    return api.get('wx/roles').then(data=>{
       return data.roles
     })
 })

@@ -4,7 +4,7 @@ const app = getApp()
 const Promise = require("../utils/promise").Promise
 const base64 = require('../utils/base64')
 
-const API_PATH = (app.globalData.env=='dev')?'http://localhost/xiansda/1/wxapp/':'https://xiansda.sinaapp.com/wxapp/'
+const API_PATH = (app.globalData.env=='dev')?'http://localhost/xiansda/1/api/':'https://xiansda.sinaapp.com/api/'
 
 const sync = require('../utils/sync')
 
